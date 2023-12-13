@@ -1,6 +1,6 @@
 import {Forecast} from './forecast.js';
 import {Location} from './location.js';
-import {CurrentWeather} from './currentWeather';
+import {CurrentWeather} from './currentWeather.js';
 
 export function Weather(weatherData) {
     this.location = new Location(weatherData.location);

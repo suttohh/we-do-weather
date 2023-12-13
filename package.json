@@ -19,10 +19,13 @@
   },
   "homepage": "https://github.com/suttohh/we-do-weather#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "lodash": "^4.17.21",
     "node-fetch": "^3.3.2"
   }

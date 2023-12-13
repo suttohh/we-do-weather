@@ -1,4 +1,4 @@
-import {Weather} from './weatherapi.js';
-import {home} from './home.js';
+import './style.css';
+import {loadWeather} from './weather-functions.js';
 
-home();
+loadWeather();

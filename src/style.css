@@ -1,0 +1,222 @@
+:root {
+    --main-theme-color: lightblue;
+}
+
+html, body {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1rem;
+    background: linear-gradient(var(--main-theme-color), white 40%);
+    background-repeat: no-repeat;
+}
+
+.page-layout {
+    margin-left: 300px;
+    margin-right: 300px;
+    gap: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-card {
+    border-radius: 5px;
+    width: 500px;
+    background-color: white;
+    padding-left: 25px;
+}
+
+.weather-card-title {
+    font-weight: 900;
+}
+
+.current-weather-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.current-temperature-div {
+    display: flex;
+    align-items: center;
+}
+
+.current-precipitation-div {
+    display: flex;
+    align-items: center;
+}
+
+.current-wind-div {
+    display: flex;
+    align-items: center;
+}
+
+.sunny-icon {
+    color: orange;
+    font-size: 2rem;
+}
+
+.current-rain-icon {
+    color: blue;
+    font-size: 2rem;
+}
+
+.current-wind-icon {
+    color: green;
+    font-size: 2rem;
+}
+
+#current-weather-temperature-text {
+    font-size: 2rem;
+    color: red;
+    margin-top: 5px;
+}
+
+#current-weather-precipitation-text {
+    font-size: 2rem;
+    color: blue;
+    margin-top: 5px;
+}
+
+#current-weather-wind-text {
+    font-size: 2rem;
+    color: green;
+    margin-top: 5px;
+}
+
+/*Weather Icon Colours*/
+
+.current-weather-icon {
+    font-size: 2rem;
+}
+
+.sunny {
+    color: orange;
+}
+
+.rainy-heavy, .rainy {
+    color: lightblue;
+}
+
+.foggy, .misty, .cloud, .partly-cloudy-day, .clear {
+    color: gray;
+}
+
+.ac-unit, .severe-cold, .weather-hail, .weather-snowy {
+    color: darkcyan;
+}
+
+.thunderstorm {
+    color: darkgoldenrod;
+}
+
+/*Weather Grid*/
+#forecast-weather-grid-container {
+    background-color: white;
+}
+
+#hourly-forecast-grid-container {
+    background-color: white;
+}
+
+#forecast-weather-grid {
+    display: grid;
+    grid-auto-rows: 50px;
+}
+
+.forecast-weather-grid-header-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.forecast-weather-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-top: 1px solid grey;
+    align-items: center;
+}
+
+.forecast-weather-grid-row:last-child {
+    border-bottom: 1px solid grey;
+}
+
+.forecast-weather-grid-row:hover {
+    background-color: var(--main-theme-color);
+}
+
+.grid-row-temp {
+    color: red;
+}
+
+.grid-row-precipitation {
+    color: blue;
+}
+
+.grid-row-wind {
+    width: 75px;
+    display: block;
+    color: green;
+}
+
+.grid-row-hourly-breakdown-div {
+    display: flex;
+    align-items: center;
+}
+
+.popup-background-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+} 
+
+.popup {
+    width: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.popup-inner-div {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#hourly-forecast-grid {
+    display: grid;
+    grid-auto-rows: 50px;
+}
+
+.hourly-forecast-grid-header-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.hourly-forecast-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-top: 1px solid grey;
+    align-items: center;
+}
+
+.hourly-forecast-grid-row:last-child {
+    border-bottom: 1px solid grey;
+}
+
+.hourly-forecast-grid-row:hover {
+    background-color: var(--main-theme-color);
+}
+
+.grid-row-wind-div {
+    display: flex;
+}
+
+.grid-row-wind-direction-icon {
+    align-self: flex-end;
+    font-size: 1rem;
+}

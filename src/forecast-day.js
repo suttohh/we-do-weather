@@ -1,3 +1,5 @@
+import {Condition} from './condition.js';
+
 export function ForecastDay(forecastDay) {
     this.averageHumidity = forecastDay.avghumidity;
     this.averageTemperatureC = forecastDay.avgtemp_c;
@@ -13,4 +15,7 @@ export function ForecastDay(forecastDay) {
     this.totalPrecipitationInches = forecastDay.totalprecip_in;
     this.totalPrecipitationMillimeters = forecastDay.totalprecip_mm;
     this.totalSnowCentimeters = forecastDay.totalsnow_cm;
+    this.condition = new Condition(forecastDay.condition.text);
+    this.maxWindKPH = forecastDay.maxwind_kph;
+    this.maxWindMPH = forecastDay.maxwind_mph;
 }

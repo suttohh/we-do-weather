@@ -23,7 +23,10 @@ WeatherAPI.prototype = {
         })
         .then(response => response.json())
         .then(response => {
+            console.log(this.weatherForecastURI + "key=" + this.weatherAPIKey + "&q=" + this.location + "&days=" + this.days + "&aqi=no&alerts=no");
+            console.log(response);
             const weather = new Weather(response);
+            console.log(weather);
             return weather;
         })
         .catch(err => {
