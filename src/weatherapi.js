@@ -3,8 +3,8 @@ import {Weather} from './weather.js';
 
 export function WeatherAPI(location, days) {
     this.weatherAPIKey = "ff28227ab63d41c1b9c33307230712";
-    this.weatherFutureURI = "http://api.weatherapi.com/v1/future.json?";
-    this.weatherForecastURI = "http://api.weatherapi.com/v1/forecast.json?"
+    this.weatherFutureURI = "https://api.weatherapi.com/v1/future.json?";
+    this.weatherForecastURI = "https://api.weatherapi.com/v1/forecast.json?"
     this.location = location;
     this.days = 7;
     //Get air quality data
