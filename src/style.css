@@ -1,31 +1,149 @@
 :root {
-    --main-theme-color: lightblue;
+    --main-theme-color: #f3f4f6;
 }
 
 html, body {
+    margin: 0px;
     font-family:'Courier New', Courier, monospace;
     font-size: 1rem;
-    background: linear-gradient(var(--main-theme-color), white 40%);
     background-repeat: no-repeat;
 }
 
-.page-layout {
-    margin-left: 300px;
-    margin-right: 300px;
+path {
+    stroke: black;
+    stroke-width: 20px;
+    stroke-linejoin: round;
+}
+
+#general-info-div {
+    display: flex;
+}
+
+.location-card {
+    margin-top: 15px;
+    margin-left: 15px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.misc-info-card {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.misc-info-display {
+    display: grid;
+    justify-self: flex-end;
+    grid-template-columns: 60px 150px;
+    grid-template-rows: 20px 20px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.misc-info-icon {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 3rem;
+}
+
+.misc-info-title {
+    font-size: 1rem;
+}
+
+.misc-info-value {
+    font-size: 2rem;
+}
+
+#page-header-div {
+    background-color: #343a40;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.page-logo-div {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.page-logo {
+    font-size: 2.5rem;
+}
+
+.page-logo-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.search-div {
+    display: flex;
+}
+
+#search-bar {
+    border: 0;
+    height: 35px;
+    width: 400px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#search-button {
+    border: 0;
+    height: 37px;
+    background-color: orange;
+    width: 75px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.error-div {
+    margin-left: 100px;
+}
+
+.error-span {
+    color: red;
+}
+
+#page-layout {
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
     gap: 200px;
     display: flex;
     flex-direction: column;
 }
 
+.weather-background {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    height: 50vh;
+    background-image: URL('./assets/images/sample.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .weather-card {
+    margin: auto;
+    color: white;
+    font-weight: 900;
     border-radius: 5px;
-    width: 500px;
-    background-color: white;
-    padding-left: 25px;
 }
 
 .weather-card-title {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-weight: 900;
+    font-size: 2rem;
 }
 
 .current-weather-info {
@@ -49,44 +167,42 @@ html, body {
     align-items: center;
 }
 
-.sunny-icon {
-    color: orange;
+.current-weather-icon {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 2rem;
 }
 
 .current-rain-icon {
-    color: blue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: lightblue;
     font-size: 2rem;
 }
 
 .current-wind-icon {
-    color: green;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: lightgreen;
     font-size: 2rem;
 }
 
 #current-weather-temperature-text {
-    font-size: 2rem;
-    color: red;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;ize: 3rem;
     margin-top: 5px;
+    font-size: 3rem;
 }
 
 #current-weather-precipitation-text {
-    font-size: 2rem;
-    color: blue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 3rem;
     margin-top: 5px;
 }
 
 #current-weather-wind-text {
-    font-size: 2rem;
-    color: green;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 3rem;
     margin-top: 5px;
 }
 
 /*Weather Icon Colours*/
-
-.current-weather-icon {
-    font-size: 2rem;
-}
 
 .sunny {
     color: orange;
@@ -111,6 +227,7 @@ html, body {
 /*Weather Grid*/
 #forecast-weather-grid-container {
     background-color: white;
+    font-weight: 900;
 }
 
 #hourly-forecast-grid-container {
@@ -123,6 +240,7 @@ html, body {
 }
 
 .forecast-weather-grid-header-div {
+    font-weight: 500;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -139,7 +257,7 @@ html, body {
 }
 
 .forecast-weather-grid-row:hover {
-    background-color: var(--main-theme-color);
+    background-color: #f3f4f6;
 }
 
 .grid-row-temp {
