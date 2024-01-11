@@ -282,7 +282,6 @@ path {
 
 .popup-background-div {
     display: flex;
-    align-items: center;
     justify-content: center;
     position: fixed;
     height: 100%;
@@ -294,9 +293,8 @@ path {
 } 
 
 .popup {
-    width: 100%;
-    margin-left: 300px;
-    margin-right: 300px;
+    overflow: auto;
+    width: 80%;
     background-color: white;
     border-radius: 5px;
 }
@@ -372,7 +370,7 @@ path {
     }
     
     #current-weather-temperature-text {
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;ize: 3rem;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         margin-top: 5px;
         font-size: 2rem;
     }
@@ -436,6 +434,36 @@ path {
 
     .forecast-weather-grid-row {
         grid-template-columns: 1fr 50px 1fr 1fr 1fr 20px;
-        text-align: center;
+    }
+
+    .misc-info-card {
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-175px);
+    }
+
+    .weather-background {
+        position: relative;
+        height: 60vh;
+    }
+
+    #general-info-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .popup-background-div {
+        overflow: auto;
+    }
+
+    .popup-inner-div {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .hourly-forecast-grid-header-div {
+        display: none;
     }
 }
