@@ -147,6 +147,7 @@ function createWeatherForecastDayGrid(weather) {
         weatherGridRow.appendChild(gridRowHourlyBreakdownDiv);
         const gridRowHourlyBreakdownText = document.createElement('span');
         gridRowHourlyBreakdownText.innerHTML = "Hourly breakdown";
+        gridRowHourlyBreakdownText.classList.add('hourly-breakdown');
         gridRowHourlyBreakdownDiv.appendChild(gridRowHourlyBreakdownText);
         const gridRowHourlyBreakdownIcon = document.createElement('span');
         gridRowHourlyBreakdownIcon.classList.add('material-symbols-outlined', 'grid-row-hourly-breakdown-icon');
